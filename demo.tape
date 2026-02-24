@@ -1,5 +1,5 @@
 # Oghma demo — search your coding memories
-# Run: vhs demo.tape
+# Run: python3 scripts/seed_demo_db.py && vhs demo.tape
 
 Output demo.gif
 
@@ -10,6 +10,7 @@ Set Height 600
 Set Padding 20
 Set Theme "Catppuccin Mocha"
 Set TypingSpeed 50ms
+Env OGHMA_DB_PATH "demo.db"
 
 # Show stats first — establishes scale
 Type "oghma stats"
@@ -17,6 +18,6 @@ Enter
 Sleep 3s
 
 # Core feature: search past learnings
-Type 'oghma search "hook" --limit 3'
+Type 'oghma search "sqlite" --limit 3'
 Enter
 Sleep 4s
